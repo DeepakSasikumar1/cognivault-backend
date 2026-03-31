@@ -1,0 +1,27 @@
+# Core Web & API
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+python-dotenv
+
+# Database & Async Drivers
+sqlalchemy>=2.0.0
+aiosqlite
+asyncpg
+greenlet
+psycopg2-binary
+
+# Security & Auth
+passlib[bcrypt]
+bcrypt==3.2.0
+python-jose[cryptography]
+python-multipart
+
+# AI & Document IQ
+google-generativeai
+pymupdf
+anyio
+
+# SaaS Utilities
+slowapi

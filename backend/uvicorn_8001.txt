@@ -1,0 +1,454 @@
+C:\Users\deepa\Downloads\Cognivault\backend\services\rag_service.py:2: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [6060]
+INFO:     Waiting for application startup.
+2026-03-31 16:13:10,276 [INFO] [ARCHITECT] root: SaaS Engine: Database initialization complete.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+2026-03-31 16:13:23,742 [INFO] [ARCHITECT] Cognivault: [2d14d6db-29ad-46fd-bec7-6b7c811a6dc2] START: GET /health
+2026-03-31 16:13:23,752 [INFO] [ARCHITECT] Cognivault: [2d14d6db-29ad-46fd-bec7-6b7c811a6dc2] END: GET /health | Status: 200 | Latency: 9.68ms
+INFO:     127.0.0.1:60571 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:13:23,765 [INFO] [ARCHITECT] Cognivault: [c7a45cf3-61e9-4373-9934-b103e433118f] START: POST /auth/register
+2026-03-31 16:13:23,784 [WARNING] [ARCHITECT] Cognivault.Auth: Registration Blocked: Email emp1@cogni.com already exists.
+2026-03-31 16:13:23,785 [INFO] [ARCHITECT] Cognivault: [c7a45cf3-61e9-4373-9934-b103e433118f] END: POST /auth/register | Status: 400 | Latency: 21.49ms
+INFO:     127.0.0.1:60572 - "POST /auth/register HTTP/1.1" 400 Bad Request
+2026-03-31 16:13:23,788 [INFO] [ARCHITECT] Cognivault: [0087b6ae-cf6f-4d3f-8792-5f9587000649] START: POST /auth/login
+2026-03-31 16:13:24,170 [INFO] [ARCHITECT] Cognivault.Auth: Session Issued: User 1 connected.
+2026-03-31 16:13:24,170 [INFO] [ARCHITECT] Cognivault: [0087b6ae-cf6f-4d3f-8792-5f9587000649] END: POST /auth/login | Status: 200 | Latency: 381.80ms
+INFO:     127.0.0.1:60573 - "POST /auth/login HTTP/1.1" 200 OK
+2026-03-31 16:13:24,176 [INFO] [ARCHITECT] Cognivault: [e30cc53e-21ca-4c78-b581-d144c36bd8a1] START: POST /documents/upload
+2026-03-31 16:13:24,216 [INFO] [ARCHITECT] Cognivault: [e30cc53e-21ca-4c78-b581-d144c36bd8a1] END: POST /documents/upload | Status: 200 | Latency: 40.00ms
+INFO:     127.0.0.1:60574 - "POST /documents/upload HTTP/1.1" 200 OK
+2026-03-31 16:13:24,216 [INFO] [ARCHITECT] Cognivault: Worker 4: Synchronization pulse started.
+2026-03-31 16:13:24,667 [INFO] [ARCHITECT] Cognivault: Indexer Finalized: Doc 4 | Tags: ['General'] | Chunks: 0
+2026-03-31 16:13:30,222 [INFO] [ARCHITECT] Cognivault: [fbd6ce7c-2f51-437b-9e00-fdb82f4d918c] START: GET /documents/4/summary
+2026-03-31 16:13:30,377 [ERROR] [ARCHITECT] Cognivault: Executive Summary Failure: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-03-31 16:13:30,377 [INFO] [ARCHITECT] Cognivault: [fbd6ce7c-2f51-437b-9e00-fdb82f4d918c] END: GET /documents/4/summary | Status: 200 | Latency: 155.37ms
+INFO:     127.0.0.1:60577 - "GET /documents/4/summary HTTP/1.1" 200 OK
+2026-03-31 16:13:30,386 [INFO] [ARCHITECT] Cognivault: [374920ee-8bf3-44a7-9376-6fae859752c3] START: POST /chat/stream
+2026-03-31 16:13:30,408 [INFO] [ARCHITECT] Cognivault: [374920ee-8bf3-44a7-9376-6fae859752c3] END: POST /chat/stream | Status: 200 | Latency: 22.12ms
+INFO:     127.0.0.1:60578 - "POST /chat/stream HTTP/1.1" 200 OK
+2026-03-31 16:13:30,432 [INFO] [ARCHITECT] Cognivault: [913522ed-f8eb-48c0-86a6-ae95976d0c26] START: GET /chat/history
+2026-03-31 16:13:30,445 [INFO] [ARCHITECT] Cognivault: [913522ed-f8eb-48c0-86a6-ae95976d0c26] END: GET /chat/history | Status: 200 | Latency: 13.00ms
+INFO:     127.0.0.1:60579 - "GET /chat/history HTTP/1.1" 200 OK
+2026-03-31 16:13:47,938 [INFO] [ARCHITECT] Cognivault: [3ba89f89-f40f-4ac9-8bf4-0db56280c534] START: GET /health
+2026-03-31 16:13:47,943 [INFO] [ARCHITECT] Cognivault: [3ba89f89-f40f-4ac9-8bf4-0db56280c534] END: GET /health | Status: 200 | Latency: 5.02ms
+INFO:     127.0.0.1:54983 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:13:47,952 [INFO] [ARCHITECT] Cognivault: [05b7a7fd-eefe-47ee-a75a-f15b6e97250b] START: POST /auth/register
+2026-03-31 16:13:47,954 [WARNING] [ARCHITECT] Cognivault.Auth: Registration Blocked: Email emp1@cogni.com already exists.
+2026-03-31 16:13:47,959 [INFO] [ARCHITECT] Cognivault: [05b7a7fd-eefe-47ee-a75a-f15b6e97250b] END: POST /auth/register | Status: 400 | Latency: 7.42ms
+INFO:     127.0.0.1:54984 - "POST /auth/register HTTP/1.1" 400 Bad Request
+2026-03-31 16:13:47,963 [INFO] [ARCHITECT] Cognivault: [35b95c2f-b09a-4a44-bcf6-d1c35598ac1a] START: POST /auth/login
+2026-03-31 16:13:48,351 [INFO] [ARCHITECT] Cognivault.Auth: Session Issued: User 1 connected.
+2026-03-31 16:13:48,351 [INFO] [ARCHITECT] Cognivault: [35b95c2f-b09a-4a44-bcf6-d1c35598ac1a] END: POST /auth/login | Status: 200 | Latency: 388.34ms
+INFO:     127.0.0.1:54985 - "POST /auth/login HTTP/1.1" 200 OK
+2026-03-31 16:13:48,368 [INFO] [ARCHITECT] Cognivault: [be3dfce6-a3ef-4aa0-80fa-d0b023a6329e] START: POST /documents/upload
+2026-03-31 16:13:48,401 [INFO] [ARCHITECT] Cognivault: [be3dfce6-a3ef-4aa0-80fa-d0b023a6329e] END: POST /documents/upload | Status: 200 | Latency: 33.83ms
+INFO:     127.0.0.1:54986 - "POST /documents/upload HTTP/1.1" 200 OK
+2026-03-31 16:13:48,405 [INFO] [ARCHITECT] Cognivault: Worker 5: Synchronization pulse started.
+2026-03-31 16:13:48,541 [INFO] [ARCHITECT] Cognivault: Indexer Finalized: Doc 5 | Tags: ['General'] | Chunks: 0
+2026-03-31 16:13:54,413 [INFO] [ARCHITECT] Cognivault: [e37bdcd0-caf2-4c98-acca-a4abf00d3e77] START: GET /documents/5/summary
+2026-03-31 16:13:54,546 [ERROR] [ARCHITECT] Cognivault: Executive Summary Failure: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-03-31 16:13:54,547 [INFO] [ARCHITECT] Cognivault: [e37bdcd0-caf2-4c98-acca-a4abf00d3e77] END: GET /documents/5/summary | Status: 200 | Latency: 133.94ms
+INFO:     127.0.0.1:54930 - "GET /documents/5/summary HTTP/1.1" 200 OK
+2026-03-31 16:13:54,551 [INFO] [ARCHITECT] Cognivault: [ff6ea6f9-3784-4a33-a038-3ef3698531a7] START: POST /chat/stream
+2026-03-31 16:13:54,571 [INFO] [ARCHITECT] Cognivault: [ff6ea6f9-3784-4a33-a038-3ef3698531a7] END: POST /chat/stream | Status: 200 | Latency: 19.51ms
+INFO:     127.0.0.1:54931 - "POST /chat/stream HTTP/1.1" 200 OK
+2026-03-31 16:13:54,601 [INFO] [ARCHITECT] Cognivault: [83b6a0f6-465c-4ef1-87af-7be9479a6805] START: GET /chat/history
+2026-03-31 16:13:54,613 [INFO] [ARCHITECT] Cognivault: [83b6a0f6-465c-4ef1-87af-7be9479a6805] END: GET /chat/history | Status: 200 | Latency: 11.55ms
+INFO:     127.0.0.1:54932 - "GET /chat/history HTTP/1.1" 200 OK
+2026-03-31 16:16:18,445 [INFO] [ARCHITECT] Cognivault: [462d8220-fce7-4c27-97d5-025e4f66ea46] START: POST /auth/register
+2026-03-31 16:16:18,780 [INFO] [ARCHITECT] Cognivault.Auth: New Tenant Registered: 2 (Employee)
+2026-03-31 16:16:18,780 [INFO] [ARCHITECT] Cognivault: [462d8220-fce7-4c27-97d5-025e4f66ea46] END: POST /auth/register | Status: 200 | Latency: 335.05ms
+INFO:     127.0.0.1:63926 - "POST /auth/register HTTP/1.1" 200 OK
+2026-03-31 16:16:18,782 [INFO] [ARCHITECT] Cognivault: [4eef660d-eae0-4b90-ab1b-c0a875f5a6e7] START: POST /auth/register
+2026-03-31 16:16:19,127 [INFO] [ARCHITECT] Cognivault.Auth: New Tenant Registered: 3 (Employee)
+2026-03-31 16:16:19,127 [INFO] [ARCHITECT] Cognivault: [4eef660d-eae0-4b90-ab1b-c0a875f5a6e7] END: POST /auth/register | Status: 200 | Latency: 344.87ms
+INFO:     127.0.0.1:63926 - "POST /auth/register HTTP/1.1" 200 OK
+2026-03-31 16:16:19,132 [INFO] [ARCHITECT] Cognivault: [fdeb2527-ee6b-458e-9f6a-c1c0d57f8863] START: POST /auth/login
+2026-03-31 16:16:19,453 [INFO] [ARCHITECT] Cognivault.Auth: Session Issued: User 2 connected.
+2026-03-31 16:16:19,453 [INFO] [ARCHITECT] Cognivault: [fdeb2527-ee6b-458e-9f6a-c1c0d57f8863] END: POST /auth/login | Status: 200 | Latency: 321.46ms
+INFO:     127.0.0.1:63926 - "POST /auth/login HTTP/1.1" 200 OK
+2026-03-31 16:16:19,490 [INFO] [ARCHITECT] Cognivault: [80ebeeee-0522-492e-b3b3-c898749b0b01] START: POST /documents/upload
+2026-03-31 16:16:19,523 [INFO] [ARCHITECT] Cognivault: [80ebeeee-0522-492e-b3b3-c898749b0b01] END: POST /documents/upload | Status: 200 | Latency: 33.31ms
+INFO:     127.0.0.1:63926 - "POST /documents/upload HTTP/1.1" 200 OK
+2026-03-31 16:16:19,524 [INFO] [ARCHITECT] Cognivault: Worker 6: Synchronization pulse started.
+2026-03-31 16:16:19,602 [INFO] [ARCHITECT] Cognivault: [b0dd9195-0007-47fb-91d5-6ef41bebfd43] START: POST /auth/login
+2026-03-31 16:16:19,963 [INFO] [ARCHITECT] Cognivault.Auth: Session Issued: User 3 connected.
+2026-03-31 16:16:19,963 [INFO] [ARCHITECT] Cognivault: [b0dd9195-0007-47fb-91d5-6ef41bebfd43] END: POST /auth/login | Status: 200 | Latency: 361.61ms
+INFO:     127.0.0.1:63926 - "POST /auth/login HTTP/1.1" 200 OK
+2026-03-31 16:16:19,963 [INFO] [ARCHITECT] Cognivault: Indexer Finalized: Doc 6 | Tags: ['General'] | Chunks: 0
+2026-03-31 16:16:19,970 [INFO] [ARCHITECT] Cognivault: [d6bedf4c-65ef-4501-b38f-7c5441e8bd5a] START: GET /documents/6/summary
+2026-03-31 16:16:19,975 [INFO] [ARCHITECT] Cognivault: [d6bedf4c-65ef-4501-b38f-7c5441e8bd5a] END: GET /documents/6/summary | Status: 403 | Latency: 5.08ms
+INFO:     127.0.0.1:63926 - "GET /documents/6/summary HTTP/1.1" 403 Forbidden
+2026-03-31 16:16:19,977 [INFO] [ARCHITECT] Cognivault: [7502381f-b705-4900-8424-6b3d6e2e39a7] START: GET /documents
+2026-03-31 16:16:20,001 [INFO] [ARCHITECT] Cognivault: [7502381f-b705-4900-8424-6b3d6e2e39a7] END: GET /documents | Status: 200 | Latency: 20.21ms
+INFO:     127.0.0.1:63926 - "GET /documents HTTP/1.1" 200 OK
+2026-03-31 16:16:20,026 [INFO] [ARCHITECT] Cognivault: [9773f118-c22c-4f48-b733-6f4a6ab3f16e] START: POST /documents/upload
+2026-03-31 16:16:20,034 [INFO] [ARCHITECT] Cognivault: [9773f118-c22c-4f48-b733-6f4a6ab3f16e] END: POST /documents/upload | Status: 400 | Latency: 8.28ms
+INFO:     127.0.0.1:63926 - "POST /documents/upload HTTP/1.1" 400 Bad Request
+2026-03-31 16:16:20,037 [INFO] [ARCHITECT] Cognivault: [65812d4a-5a31-4a47-88bc-20eb0e1cfba4] START: GET /documents
+2026-03-31 16:16:20,038 [INFO] [ARCHITECT] Cognivault: [65812d4a-5a31-4a47-88bc-20eb0e1cfba4] END: GET /documents | Status: 401 | Latency: 1.10ms
+INFO:     127.0.0.1:63926 - "GET /documents HTTP/1.1" 401 Unauthorized
+2026-03-31 16:16:20,038 [INFO] [ARCHITECT] Cognivault: [a720b008-6f1b-4350-8c2e-bc18598195e8] START: GET /documents/../main.py/summary
+2026-03-31 16:16:20,038 [INFO] [ARCHITECT] Cognivault: [a720b008-6f1b-4350-8c2e-bc18598195e8] END: GET /documents/../main.py/summary | Status: 404 | Latency: 0.00ms
+INFO:     127.0.0.1:63926 - "GET /documents/../main.py/summary HTTP/1.1" 404 Not Found
+2026-03-31 16:16:20,062 [INFO] [ARCHITECT] Cognivault: [9d249e65-04f1-4a59-9b4b-ba2df96004c9] START: GET /health
+2026-03-31 16:16:20,066 [INFO] [ARCHITECT] Cognivault: [9d249e65-04f1-4a59-9b4b-ba2df96004c9] END: GET /health | Status: 200 | Latency: 4.13ms
+INFO:     127.0.0.1:63926 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,066 [INFO] [ARCHITECT] Cognivault: [b65f19ae-240e-489e-80b1-b3e0b80eec50] START: GET /health
+2026-03-31 16:16:20,071 [INFO] [ARCHITECT] Cognivault: [1c9788d4-0212-4dd3-8b02-58424b6b8f51] START: GET /health
+2026-03-31 16:16:20,071 [INFO] [ARCHITECT] Cognivault: [3fc4e322-9110-4cfd-92a8-6b60d1ded489] START: GET /health
+2026-03-31 16:16:20,073 [INFO] [ARCHITECT] Cognivault: [07f2c403-1c34-4732-983e-899d6ee0e026] START: GET /health
+2026-03-31 16:16:20,073 [INFO] [ARCHITECT] Cognivault: [79815dd2-cef2-4f93-9ee3-85c8ec8bfb41] START: GET /health
+2026-03-31 16:16:20,078 [INFO] [ARCHITECT] Cognivault: [6d5061c4-e7d1-4746-ab3d-4c1db3b8576a] START: GET /health
+2026-03-31 16:16:20,078 [INFO] [ARCHITECT] Cognivault: [9d672cff-5243-4054-a069-1c72d45657d9] START: GET /health
+2026-03-31 16:16:20,078 [INFO] [ARCHITECT] Cognivault: [1dff934d-4fc4-462a-97f0-233733eef9b6] START: GET /health
+2026-03-31 16:16:20,082 [INFO] [ARCHITECT] Cognivault: [e19373dd-508b-4dbd-869f-5c010f3a7be5] START: GET /health
+2026-03-31 16:16:20,082 [INFO] [ARCHITECT] Cognivault: [36bcc469-1055-41ce-8959-163c243ba2a8] START: GET /health
+2026-03-31 16:16:20,087 [INFO] [ARCHITECT] Cognivault: [18ff4b22-d2fe-4051-aacd-65784376e142] START: GET /health
+2026-03-31 16:16:20,087 [INFO] [ARCHITECT] Cognivault: [a320faaa-f17c-43a5-93cd-1c578843130b] START: GET /health
+2026-03-31 16:16:20,088 [INFO] [ARCHITECT] Cognivault: [1694059d-2678-4737-9a96-3eb64298ad22] START: GET /health
+2026-03-31 16:16:20,091 [INFO] [ARCHITECT] Cognivault: [2007f9f6-4327-4dc1-a22e-b617aba2589e] START: GET /health
+2026-03-31 16:16:20,091 [INFO] [ARCHITECT] Cognivault: [bd4252b3-a99a-4add-bde1-2b30d9ff202f] START: GET /health
+2026-03-31 16:16:20,091 [INFO] [ARCHITECT] Cognivault: [854ab183-d1aa-4a7b-9f0e-ac94df945540] START: GET /health
+2026-03-31 16:16:20,095 [INFO] [ARCHITECT] Cognivault: [69c34f7b-4f9e-4044-992d-4f28cda749f1] START: GET /health
+2026-03-31 16:16:20,097 [INFO] [ARCHITECT] Cognivault: [7ed4cb29-3b97-40ad-b247-c7602e9a3d39] START: GET /health
+2026-03-31 16:16:20,099 [INFO] [ARCHITECT] Cognivault: [bdc573f5-185a-44e3-87d4-ff3cd731d062] START: GET /health
+2026-03-31 16:16:20,101 [INFO] [ARCHITECT] Cognivault: [95cfb8d7-94a7-4d84-93dc-13080c2566a2] START: GET /health
+2026-03-31 16:16:20,101 [INFO] [ARCHITECT] Cognivault: [3d14f7b7-dde5-4b12-8442-6148492978b5] START: GET /health
+2026-03-31 16:16:20,106 [INFO] [ARCHITECT] Cognivault: [01e96a0b-f943-4fca-b0b4-3249d66da973] START: GET /health
+2026-03-31 16:16:20,108 [INFO] [ARCHITECT] Cognivault: [b65f19ae-240e-489e-80b1-b3e0b80eec50] END: GET /health | Status: 200 | Latency: 41.47ms
+INFO:     127.0.0.1:63928 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,108 [INFO] [ARCHITECT] Cognivault: [e8f73afd-0e1b-4454-88a3-571b473831f2] START: GET /health
+2026-03-31 16:16:20,108 [INFO] [ARCHITECT] Cognivault: [8a90a262-36f8-45f2-ab5d-c71a683e506d] START: GET /health
+2026-03-31 16:16:20,113 [INFO] [ARCHITECT] Cognivault: [708e643f-53f7-4ead-bc42-39ad6286db0b] START: GET /health
+2026-03-31 16:16:20,114 [INFO] [ARCHITECT] Cognivault: [1c9788d4-0212-4dd3-8b02-58424b6b8f51] END: GET /health | Status: 200 | Latency: 43.29ms
+INFO:     127.0.0.1:63929 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,114 [INFO] [ARCHITECT] Cognivault: [1bf092a3-a271-4896-85ee-d2ee9f74142f] START: GET /health
+2026-03-31 16:16:20,116 [INFO] [ARCHITECT] Cognivault: [78a4a966-6348-49e2-aa67-842d176afbac] START: GET /health
+2026-03-31 16:16:20,118 [INFO] [ARCHITECT] Cognivault: [79815dd2-cef2-4f93-9ee3-85c8ec8bfb41] END: GET /health | Status: 200 | Latency: 44.98ms
+INFO:     127.0.0.1:63932 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,118 [INFO] [ARCHITECT] Cognivault: [3fc4e322-9110-4cfd-92a8-6b60d1ded489] END: GET /health | Status: 200 | Latency: 47.00ms
+INFO:     127.0.0.1:63930 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,118 [INFO] [ARCHITECT] Cognivault: [07f2c403-1c34-4732-983e-899d6ee0e026] END: GET /health | Status: 200 | Latency: 44.98ms
+INFO:     127.0.0.1:63931 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,120 [INFO] [ARCHITECT] Cognivault: [ed624a4e-cb11-4c70-9a74-391ef063322c] START: GET /health
+2026-03-31 16:16:20,122 [INFO] [ARCHITECT] Cognivault: [9d672cff-5243-4054-a069-1c72d45657d9] END: GET /health | Status: 200 | Latency: 43.83ms
+INFO:     127.0.0.1:63926 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,122 [INFO] [ARCHITECT] Cognivault: [91fbe4ea-0bdf-4378-8f99-243cb9a38809] START: GET /health
+2026-03-31 16:16:20,122 [INFO] [ARCHITECT] Cognivault: [1dff934d-4fc4-462a-97f0-233733eef9b6] END: GET /health | Status: 200 | Latency: 43.83ms
+INFO:     127.0.0.1:63934 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,122 [INFO] [ARCHITECT] Cognivault: [6d5061c4-e7d1-4746-ab3d-4c1db3b8576a] END: GET /health | Status: 200 | Latency: 44.34ms
+INFO:     127.0.0.1:63933 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,126 [INFO] [ARCHITECT] Cognivault: [e19373dd-508b-4dbd-869f-5c010f3a7be5] END: GET /health | Status: 200 | Latency: 43.91ms
+INFO:     127.0.0.1:63935 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,126 [INFO] [ARCHITECT] Cognivault: [36bcc469-1055-41ce-8959-163c243ba2a8] END: GET /health | Status: 200 | Latency: 43.91ms
+INFO:     127.0.0.1:63936 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,126 [INFO] [ARCHITECT] Cognivault: [32a31a97-ec44-473e-85e5-810772e27c83] START: GET /health
+2026-03-31 16:16:20,126 [INFO] [ARCHITECT] Cognivault: [a320faaa-f17c-43a5-93cd-1c578843130b] END: GET /health | Status: 200 | Latency: 38.93ms
+INFO:     127.0.0.1:63938 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,126 [INFO] [ARCHITECT] Cognivault: [18ff4b22-d2fe-4051-aacd-65784376e142] END: GET /health | Status: 200 | Latency: 38.93ms
+INFO:     127.0.0.1:63937 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,126 [INFO] [ARCHITECT] Cognivault: [b47ecb03-1660-4562-88d7-a08e0f075cb0] START: GET /health
+2026-03-31 16:16:20,132 [INFO] [ARCHITECT] Cognivault: [bd4252b3-a99a-4add-bde1-2b30d9ff202f] END: GET /health | Status: 200 | Latency: 40.95ms
+INFO:     127.0.0.1:63941 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,132 [INFO] [ARCHITECT] Cognivault: [1694059d-2678-4737-9a96-3eb64298ad22] END: GET /health | Status: 200 | Latency: 43.73ms
+INFO:     127.0.0.1:63939 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,132 [INFO] [ARCHITECT] Cognivault: [2007f9f6-4327-4dc1-a22e-b617aba2589e] END: GET /health | Status: 200 | Latency: 40.95ms
+INFO:     127.0.0.1:63940 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,134 [INFO] [ARCHITECT] Cognivault: [0758a3a2-a0e7-46ee-8848-415575e03aea] START: GET /health
+2026-03-31 16:16:20,135 [INFO] [ARCHITECT] Cognivault: [c4a7a778-ccc9-439b-97a4-777ebd844a45] START: GET /health
+2026-03-31 16:16:20,138 [INFO] [ARCHITECT] Cognivault: [0bcc8ba8-724c-4520-b215-4e9df5a1b98d] START: GET /health
+2026-03-31 16:16:20,140 [INFO] [ARCHITECT] Cognivault: [5800c9d3-1536-481f-b560-9e7baaaa75c8] START: GET /health
+2026-03-31 16:16:20,140 [INFO] [ARCHITECT] Cognivault: [1048a000-5164-4e39-be0a-65507644674f] START: GET /health
+2026-03-31 16:16:20,140 [INFO] [ARCHITECT] Cognivault: [942c46ea-c7d8-4d73-b4bc-cdd854da3cca] START: GET /health
+2026-03-31 16:16:20,145 [INFO] [ARCHITECT] Cognivault: [0cd57bfc-f0db-4ac1-8054-5d4c3c6c8c9d] START: GET /health
+2026-03-31 16:16:20,148 [INFO] [ARCHITECT] Cognivault: [64334306-2c58-469f-b697-1d976e48cd8d] START: GET /health
+2026-03-31 16:16:20,148 [INFO] [ARCHITECT] Cognivault: [a476b7d2-a7c6-4d04-8cf1-f3caa62cf9c8] START: GET /health
+2026-03-31 16:16:20,151 [INFO] [ARCHITECT] Cognivault: [2d8a4e4e-f668-4b03-9be4-2a41a47eec4a] START: GET /health
+2026-03-31 16:16:20,151 [INFO] [ARCHITECT] Cognivault: [96daacd5-f3c9-46d7-8033-a15f74cb4668] START: GET /health
+2026-03-31 16:16:20,151 [INFO] [ARCHITECT] Cognivault: [273e0599-a787-4d5e-8ade-f732cb8548d4] START: GET /health
+2026-03-31 16:16:20,151 [INFO] [ARCHITECT] Cognivault: [7a622e22-fb9b-4545-8d1c-221560ab61ea] START: GET /health
+2026-03-31 16:16:20,151 [INFO] [ARCHITECT] Cognivault: [32f4b36a-4a49-4761-88cc-d506e4d7b46a] START: GET /health
+2026-03-31 16:16:20,162 [INFO] [ARCHITECT] Cognivault: [534b1d2d-ccc7-46d5-be83-3833d3db1143] START: GET /health
+2026-03-31 16:16:20,165 [INFO] [ARCHITECT] Cognivault: [ae27adb3-cb04-4d50-9f8e-9a8bedcf49dd] START: GET /health
+2026-03-31 16:16:20,168 [INFO] [ARCHITECT] Cognivault: [3b83daa7-64aa-400d-9bc3-d91d0a0c3bcb] START: GET /health
+2026-03-31 16:16:20,168 [INFO] [ARCHITECT] Cognivault: [78a4a966-6348-49e2-aa67-842d176afbac] END: GET /health | Status: 200 | Latency: 52.04ms
+INFO:     127.0.0.1:63953 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,171 [INFO] [ARCHITECT] Cognivault: [3d792a7b-439e-4966-9ac7-d83e64f6240b] START: GET /health
+2026-03-31 16:16:20,172 [INFO] [ARCHITECT] Cognivault: [32a31a97-ec44-473e-85e5-810772e27c83] END: GET /health | Status: 200 | Latency: 45.89ms
+INFO:     127.0.0.1:63956 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,175 [INFO] [ARCHITECT] Cognivault: [0758a3a2-a0e7-46ee-8848-415575e03aea] END: GET /health | Status: 200 | Latency: 40.80ms
+INFO:     127.0.0.1:63958 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,176 [INFO] [ARCHITECT] Cognivault: [7ed4cb29-3b97-40ad-b247-c7602e9a3d39] END: GET /health | Status: 200 | Latency: 78.20ms
+INFO:     127.0.0.1:63944 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,176 [INFO] [ARCHITECT] Cognivault: [bdc573f5-185a-44e3-87d4-ff3cd731d062] END: GET /health | Status: 200 | Latency: 76.94ms
+INFO:     127.0.0.1:63945 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,176 [INFO] [ARCHITECT] Cognivault: [c4a7a778-ccc9-439b-97a4-777ebd844a45] END: GET /health | Status: 200 | Latency: 40.73ms
+INFO:     127.0.0.1:63959 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,177 [INFO] [ARCHITECT] Cognivault: [0bcc8ba8-724c-4520-b215-4e9df5a1b98d] END: GET /health | Status: 200 | Latency: 39.26ms
+INFO:     127.0.0.1:63960 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,179 [INFO] [ARCHITECT] Cognivault: [5800c9d3-1536-481f-b560-9e7baaaa75c8] END: GET /health | Status: 200 | Latency: 38.95ms
+INFO:     127.0.0.1:63961 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,179 [INFO] [ARCHITECT] Cognivault: [8a90a262-36f8-45f2-ab5d-c71a683e506d] END: GET /health | Status: 200 | Latency: 71.05ms
+INFO:     127.0.0.1:63950 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,179 [INFO] [ARCHITECT] Cognivault: [708e643f-53f7-4ead-bc42-39ad6286db0b] END: GET /health | Status: 200 | Latency: 66.71ms
+INFO:     127.0.0.1:63951 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,179 [INFO] [ARCHITECT] Cognivault: [01e96a0b-f943-4fca-b0b4-3249d66da973] END: GET /health | Status: 200 | Latency: 73.31ms
+INFO:     127.0.0.1:63948 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,185 [INFO] [ARCHITECT] Cognivault: [1048a000-5164-4e39-be0a-65507644674f] END: GET /health | Status: 200 | Latency: 44.54ms
+INFO:     127.0.0.1:63962 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,185 [INFO] [ARCHITECT] Cognivault: [ed624a4e-cb11-4c70-9a74-391ef063322c] END: GET /health | Status: 200 | Latency: 65.12ms
+INFO:     127.0.0.1:63954 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,185 [INFO] [ARCHITECT] Cognivault: [e8f73afd-0e1b-4454-88a3-571b473831f2] END: GET /health | Status: 200 | Latency: 76.96ms
+INFO:     127.0.0.1:63949 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,185 [INFO] [ARCHITECT] Cognivault: [91fbe4ea-0bdf-4378-8f99-243cb9a38809] END: GET /health | Status: 200 | Latency: 62.87ms
+INFO:     127.0.0.1:63955 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,221 [INFO] [ARCHITECT] Cognivault: [b47ecb03-1660-4562-88d7-a08e0f075cb0] END: GET /health | Status: 200 | Latency: 95.46ms
+INFO:     127.0.0.1:63957 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,224 [INFO] [ARCHITECT] Cognivault: [0cd57bfc-f0db-4ac1-8054-5d4c3c6c8c9d] END: GET /health | Status: 200 | Latency: 79.29ms
+INFO:     127.0.0.1:63964 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,226 [INFO] [ARCHITECT] Cognivault: [854ab183-d1aa-4a7b-9f0e-ac94df945540] END: GET /health | Status: 200 | Latency: 135.51ms
+INFO:     127.0.0.1:63942 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,226 [INFO] [ARCHITECT] Cognivault: [942c46ea-c7d8-4d73-b4bc-cdd854da3cca] END: GET /health | Status: 200 | Latency: 85.88ms
+INFO:     127.0.0.1:63963 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,226 [INFO] [ARCHITECT] Cognivault: [3d14f7b7-dde5-4b12-8442-6148492978b5] END: GET /health | Status: 200 | Latency: 124.82ms
+INFO:     127.0.0.1:63947 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,226 [INFO] [ARCHITECT] Cognivault: [69c34f7b-4f9e-4044-992d-4f28cda749f1] END: GET /health | Status: 200 | Latency: 130.90ms
+INFO:     127.0.0.1:63943 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,232 [INFO] [ARCHITECT] Cognivault: [2d8a4e4e-f668-4b03-9be4-2a41a47eec4a] END: GET /health | Status: 200 | Latency: 80.50ms
+INFO:     127.0.0.1:63967 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,232 [INFO] [ARCHITECT] Cognivault: [95cfb8d7-94a7-4d84-93dc-13080c2566a2] END: GET /health | Status: 200 | Latency: 130.36ms
+INFO:     127.0.0.1:63946 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,235 [INFO] [ARCHITECT] Cognivault: [7a622e22-fb9b-4545-8d1c-221560ab61ea] END: GET /health | Status: 200 | Latency: 83.32ms
+INFO:     127.0.0.1:63970 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,235 [INFO] [ARCHITECT] Cognivault: [96daacd5-f3c9-46d7-8033-a15f74cb4668] END: GET /health | Status: 200 | Latency: 83.85ms
+INFO:     127.0.0.1:63968 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,235 [INFO] [ARCHITECT] Cognivault: [a476b7d2-a7c6-4d04-8cf1-f3caa62cf9c8] END: GET /health | Status: 200 | Latency: 87.16ms
+INFO:     127.0.0.1:63966 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,235 [INFO] [ARCHITECT] Cognivault: [1bf092a3-a271-4896-85ee-d2ee9f74142f] END: GET /health | Status: 200 | Latency: 121.25ms
+INFO:     127.0.0.1:63952 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,240 [INFO] [ARCHITECT] Cognivault: [64334306-2c58-469f-b697-1d976e48cd8d] END: GET /health | Status: 200 | Latency: 92.01ms
+INFO:     127.0.0.1:63965 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,241 [INFO] [ARCHITECT] Cognivault: [273e0599-a787-4d5e-8ade-f732cb8548d4] END: GET /health | Status: 200 | Latency: 89.88ms
+INFO:     127.0.0.1:63969 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,245 [INFO] [ARCHITECT] Cognivault: [32f4b36a-4a49-4761-88cc-d506e4d7b46a] END: GET /health | Status: 200 | Latency: 94.04ms
+INFO:     127.0.0.1:63971 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,247 [INFO] [ARCHITECT] Cognivault: [534b1d2d-ccc7-46d5-be83-3833d3db1143] END: GET /health | Status: 200 | Latency: 85.60ms
+INFO:     127.0.0.1:63972 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,251 [INFO] [ARCHITECT] Cognivault: [3b83daa7-64aa-400d-9bc3-d91d0a0c3bcb] END: GET /health | Status: 200 | Latency: 83.22ms
+INFO:     127.0.0.1:63974 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,251 [INFO] [ARCHITECT] Cognivault: [ae27adb3-cb04-4d50-9f8e-9a8bedcf49dd] END: GET /health | Status: 200 | Latency: 85.91ms
+INFO:     127.0.0.1:63973 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:20,251 [INFO] [ARCHITECT] Cognivault: [3d792a7b-439e-4966-9ac7-d83e64f6240b] END: GET /health | Status: 200 | Latency: 80.80ms
+INFO:     127.0.0.1:63975 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:39,239 [INFO] [ARCHITECT] Cognivault: [857f7a64-577e-4211-b182-0c59df94137a] START: POST /auth/register
+2026-03-31 16:16:39,582 [INFO] [ARCHITECT] Cognivault.Auth: New Tenant Registered: 4 (Employee)
+2026-03-31 16:16:39,584 [INFO] [ARCHITECT] Cognivault: [857f7a64-577e-4211-b182-0c59df94137a] END: POST /auth/register | Status: 200 | Latency: 345.62ms
+INFO:     127.0.0.1:60132 - "POST /auth/register HTTP/1.1" 200 OK
+2026-03-31 16:16:39,585 [INFO] [ARCHITECT] Cognivault: [9b140840-586b-4198-9a09-cf7ab8b2fa82] START: POST /auth/register
+2026-03-31 16:16:39,925 [INFO] [ARCHITECT] Cognivault.Auth: New Tenant Registered: 5 (Employee)
+2026-03-31 16:16:39,925 [INFO] [ARCHITECT] Cognivault: [9b140840-586b-4198-9a09-cf7ab8b2fa82] END: POST /auth/register | Status: 200 | Latency: 340.55ms
+INFO:     127.0.0.1:60132 - "POST /auth/register HTTP/1.1" 200 OK
+2026-03-31 16:16:39,932 [INFO] [ARCHITECT] Cognivault: [eea21420-a89a-4e96-95d7-1d2861d74ddc] START: POST /auth/login
+2026-03-31 16:16:40,255 [INFO] [ARCHITECT] Cognivault.Auth: Session Issued: User 4 connected.
+2026-03-31 16:16:40,255 [INFO] [ARCHITECT] Cognivault: [eea21420-a89a-4e96-95d7-1d2861d74ddc] END: POST /auth/login | Status: 200 | Latency: 323.65ms
+INFO:     127.0.0.1:60132 - "POST /auth/login HTTP/1.1" 200 OK
+2026-03-31 16:16:40,292 [INFO] [ARCHITECT] Cognivault: [f70b4db1-b10c-40e6-9dbe-a9471066ca35] START: POST /documents/upload
+2026-03-31 16:16:40,321 [INFO] [ARCHITECT] Cognivault: [f70b4db1-b10c-40e6-9dbe-a9471066ca35] END: POST /documents/upload | Status: 200 | Latency: 28.82ms
+INFO:     127.0.0.1:60132 - "POST /documents/upload HTTP/1.1" 200 OK
+2026-03-31 16:16:40,324 [INFO] [ARCHITECT] Cognivault: Worker 7: Synchronization pulse started.
+2026-03-31 16:16:40,434 [INFO] [ARCHITECT] Cognivault: [303ba8cb-1443-4694-98d4-7e7d8b517800] START: POST /auth/login
+2026-03-31 16:16:40,806 [INFO] [ARCHITECT] Cognivault.Auth: Session Issued: User 5 connected.
+2026-03-31 16:16:40,813 [INFO] [ARCHITECT] Cognivault: [303ba8cb-1443-4694-98d4-7e7d8b517800] END: POST /auth/login | Status: 200 | Latency: 379.01ms
+INFO:     127.0.0.1:60132 - "POST /auth/login HTTP/1.1" 200 OK
+2026-03-31 16:16:40,816 [INFO] [ARCHITECT] Cognivault: [dfc49f06-ab70-403d-8e66-e85ac25a4c9c] START: GET /documents/7/summary
+2026-03-31 16:16:40,834 [INFO] [ARCHITECT] Cognivault: Indexer Finalized: Doc 7 | Tags: ['General'] | Chunks: 0
+2026-03-31 16:16:40,841 [INFO] [ARCHITECT] Cognivault: [dfc49f06-ab70-403d-8e66-e85ac25a4c9c] END: GET /documents/7/summary | Status: 403 | Latency: 24.82ms
+INFO:     127.0.0.1:60132 - "GET /documents/7/summary HTTP/1.1" 403 Forbidden
+2026-03-31 16:16:40,848 [INFO] [ARCHITECT] Cognivault: [c638d2e0-5d0d-4a00-bdd9-4575f092631c] START: GET /documents
+2026-03-31 16:16:40,857 [INFO] [ARCHITECT] Cognivault: [c638d2e0-5d0d-4a00-bdd9-4575f092631c] END: GET /documents | Status: 200 | Latency: 8.51ms
+INFO:     127.0.0.1:60132 - "GET /documents HTTP/1.1" 200 OK
+2026-03-31 16:16:40,886 [INFO] [ARCHITECT] Cognivault: [efed6f81-34aa-4fa2-9279-9f7c0a501d91] START: POST /documents/upload
+2026-03-31 16:16:40,891 [INFO] [ARCHITECT] Cognivault: [efed6f81-34aa-4fa2-9279-9f7c0a501d91] END: POST /documents/upload | Status: 400 | Latency: 4.36ms
+INFO:     127.0.0.1:60132 - "POST /documents/upload HTTP/1.1" 400 Bad Request
+2026-03-31 16:16:40,895 [INFO] [ARCHITECT] Cognivault: [1454472b-7870-474a-bc7a-652234d18b4d] START: GET /documents
+2026-03-31 16:16:40,897 [INFO] [ARCHITECT] Cognivault: [1454472b-7870-474a-bc7a-652234d18b4d] END: GET /documents | Status: 401 | Latency: 2.00ms
+INFO:     127.0.0.1:60132 - "GET /documents HTTP/1.1" 401 Unauthorized
+2026-03-31 16:16:40,898 [INFO] [ARCHITECT] Cognivault: [39079cf7-c1e0-44ea-8ec3-68e4544e3dc3] START: GET /documents/../main.py/summary
+2026-03-31 16:16:40,898 [INFO] [ARCHITECT] Cognivault: [39079cf7-c1e0-44ea-8ec3-68e4544e3dc3] END: GET /documents/../main.py/summary | Status: 404 | Latency: 0.00ms
+INFO:     127.0.0.1:60132 - "GET /documents/../main.py/summary HTTP/1.1" 404 Not Found
+2026-03-31 16:16:40,908 [INFO] [ARCHITECT] Cognivault: [930fc374-31f5-4001-8d1b-b86b5383a667] START: GET /health
+2026-03-31 16:16:40,918 [INFO] [ARCHITECT] Cognivault: [930fc374-31f5-4001-8d1b-b86b5383a667] END: GET /health | Status: 200 | Latency: 9.72ms
+INFO:     127.0.0.1:60132 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:40,918 [INFO] [ARCHITECT] Cognivault: [d815973d-0b4c-4b8f-a8cd-4878e2018b0b] START: GET /health
+2026-03-31 16:16:40,921 [INFO] [ARCHITECT] Cognivault: [555aa3d7-549d-49d7-b842-94f774bbfe4a] START: GET /health
+2026-03-31 16:16:40,921 [INFO] [ARCHITECT] Cognivault: [c4f393ba-8c69-401a-9bc0-4f61d39bf0c0] START: GET /health
+2026-03-31 16:16:40,923 [INFO] [ARCHITECT] Cognivault: [c9a02894-1c16-4469-bedf-ca5e5fefc5dc] START: GET /health
+2026-03-31 16:16:40,925 [INFO] [ARCHITECT] Cognivault: [28783fcd-2dcd-4c93-97b6-17443478c987] START: GET /health
+2026-03-31 16:16:40,926 [INFO] [ARCHITECT] Cognivault: [41ea781d-03de-4592-b2a6-256a39f55ddd] START: GET /health
+2026-03-31 16:16:40,927 [INFO] [ARCHITECT] Cognivault: [db1fe461-a8ab-495b-b121-ce8f5270224f] START: GET /health
+2026-03-31 16:16:40,927 [INFO] [ARCHITECT] Cognivault: [0fc2d4c9-d50d-4e3e-ae38-ae7332a7dac9] START: GET /health
+2026-03-31 16:16:40,927 [INFO] [ARCHITECT] Cognivault: [0500d70e-2aa7-4688-a82c-51d7b430a33a] START: GET /health
+2026-03-31 16:16:40,927 [INFO] [ARCHITECT] Cognivault: [d3933d7f-69ca-4542-86e9-ff8a3beb1c1f] START: GET /health
+2026-03-31 16:16:40,935 [INFO] [ARCHITECT] Cognivault: [0c1d73ff-88ef-46f2-b689-a32953a28841] START: GET /health
+2026-03-31 16:16:40,935 [INFO] [ARCHITECT] Cognivault: [facf803d-20ab-4d80-8a0c-7de312c0ab4a] START: GET /health
+2026-03-31 16:16:40,938 [INFO] [ARCHITECT] Cognivault: [1905a7be-a9b9-4803-9aa0-c12b722f59de] START: GET /health
+2026-03-31 16:16:40,938 [INFO] [ARCHITECT] Cognivault: [2714f84d-29a3-40c7-8047-6bdc5156317d] START: GET /health
+2026-03-31 16:16:40,938 [INFO] [ARCHITECT] Cognivault: [9d709620-eaff-49e6-9c02-5fef411e3771] START: GET /health
+2026-03-31 16:16:40,938 [INFO] [ARCHITECT] Cognivault: [ce233b39-d66c-4ca7-9878-d4a6f520e88f] START: GET /health
+2026-03-31 16:16:40,938 [INFO] [ARCHITECT] Cognivault: [560a8b3b-65de-4804-baa9-4f96edd5035f] START: GET /health
+2026-03-31 16:16:40,945 [INFO] [ARCHITECT] Cognivault: [61ae5252-5206-4118-9d49-e5892e437b32] START: GET /health
+2026-03-31 16:16:40,948 [INFO] [ARCHITECT] Cognivault: [15b179c7-813b-4259-9831-d1514f80156a] START: GET /health
+2026-03-31 16:16:40,950 [INFO] [ARCHITECT] Cognivault: [31107498-c795-4c2c-9bbd-acb8ba1da527] START: GET /health
+2026-03-31 16:16:40,953 [INFO] [ARCHITECT] Cognivault: [7ea6a260-12a4-4906-b668-451ac5251fb8] START: GET /health
+2026-03-31 16:16:40,964 [INFO] [ARCHITECT] Cognivault: [c334adf2-9c77-4b7e-a7e5-be8fd5bc577a] START: GET /health
+2026-03-31 16:16:40,972 [INFO] [ARCHITECT] Cognivault: [5b067468-e50d-447a-8dee-d5bf4f836de9] START: GET /health
+2026-03-31 16:16:40,976 [INFO] [ARCHITECT] Cognivault: [46fbe873-3e0c-45ab-88c8-defcb2a8f63c] START: GET /health
+2026-03-31 16:16:40,978 [INFO] [ARCHITECT] Cognivault: [9374308a-a47d-4b9b-b8cf-55011481c360] START: GET /health
+2026-03-31 16:16:40,978 [INFO] [ARCHITECT] Cognivault: [194574a9-cbe8-4600-89cc-d67e48537efe] START: GET /health
+2026-03-31 16:16:40,978 [INFO] [ARCHITECT] Cognivault: [d815973d-0b4c-4b8f-a8cd-4878e2018b0b] END: GET /health | Status: 200 | Latency: 60.00ms
+INFO:     127.0.0.1:60133 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,051 [INFO] [ARCHITECT] Cognivault: [2e861903-b127-4b4e-aa1e-78a09601807c] START: GET /health
+2026-03-31 16:16:41,051 [INFO] [ARCHITECT] Cognivault: [cfd2a138-6dee-4cdd-a8d9-8442e7f5d8de] START: GET /health
+2026-03-31 16:16:41,058 [INFO] [ARCHITECT] Cognivault: [c4f393ba-8c69-401a-9bc0-4f61d39bf0c0] END: GET /health | Status: 200 | Latency: 137.51ms
+INFO:     127.0.0.1:60135 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,058 [INFO] [ARCHITECT] Cognivault: [c9a02894-1c16-4469-bedf-ca5e5fefc5dc] END: GET /health | Status: 200 | Latency: 134.94ms
+INFO:     127.0.0.1:60136 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,058 [INFO] [ARCHITECT] Cognivault: [555aa3d7-549d-49d7-b842-94f774bbfe4a] END: GET /health | Status: 200 | Latency: 137.51ms
+INFO:     127.0.0.1:60134 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,058 [INFO] [ARCHITECT] Cognivault: [02b1e44e-8ec8-440e-9af2-e7c4a6ac8f02] START: GET /health
+2026-03-31 16:16:41,063 [INFO] [ARCHITECT] Cognivault: [41ea781d-03de-4592-b2a6-256a39f55ddd] END: GET /health | Status: 200 | Latency: 137.42ms
+INFO:     127.0.0.1:60138 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,063 [INFO] [ARCHITECT] Cognivault: [13be6d03-5947-469f-ada7-7d8c6114fb5a] START: GET /health
+2026-03-31 16:16:41,063 [INFO] [ARCHITECT] Cognivault: [0fc2d4c9-d50d-4e3e-ae38-ae7332a7dac9] END: GET /health | Status: 200 | Latency: 136.67ms
+INFO:     127.0.0.1:60140 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,063 [INFO] [ARCHITECT] Cognivault: [0500d70e-2aa7-4688-a82c-51d7b430a33a] END: GET /health | Status: 200 | Latency: 136.67ms
+INFO:     127.0.0.1:60132 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,063 [INFO] [ARCHITECT] Cognivault: [db1fe461-a8ab-495b-b121-ce8f5270224f] END: GET /health | Status: 200 | Latency: 136.67ms
+INFO:     127.0.0.1:60139 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,063 [INFO] [ARCHITECT] Cognivault: [28783fcd-2dcd-4c93-97b6-17443478c987] END: GET /health | Status: 200 | Latency: 138.42ms
+INFO:     127.0.0.1:60137 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,067 [INFO] [ARCHITECT] Cognivault: [fe24057e-81ea-4b8f-a3e4-bd374f6ac2f7] START: GET /health
+2026-03-31 16:16:41,067 [INFO] [ARCHITECT] Cognivault: [0c1d73ff-88ef-46f2-b689-a32953a28841] END: GET /health | Status: 200 | Latency: 132.62ms
+INFO:     127.0.0.1:60142 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,070 [INFO] [ARCHITECT] Cognivault: [a8b1816f-7752-4bd0-89f6-bba3e7d42046] START: GET /health
+2026-03-31 16:16:41,070 [INFO] [ARCHITECT] Cognivault: [facf803d-20ab-4d80-8a0c-7de312c0ab4a] END: GET /health | Status: 200 | Latency: 135.18ms
+INFO:     127.0.0.1:60143 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,070 [INFO] [ARCHITECT] Cognivault: [1905a7be-a9b9-4803-9aa0-c12b722f59de] END: GET /health | Status: 200 | Latency: 132.00ms
+INFO:     127.0.0.1:60144 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,074 [INFO] [ARCHITECT] Cognivault: [d3933d7f-69ca-4542-86e9-ff8a3beb1c1f] END: GET /health | Status: 200 | Latency: 146.99ms
+INFO:     127.0.0.1:60141 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,074 [INFO] [ARCHITECT] Cognivault: [6778c388-bab5-47c0-9353-51c0a1eb4a11] START: GET /health
+2026-03-31 16:16:41,076 [INFO] [ARCHITECT] Cognivault: [2714f84d-29a3-40c7-8047-6bdc5156317d] END: GET /health | Status: 200 | Latency: 137.80ms
+INFO:     127.0.0.1:60145 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,076 [INFO] [ARCHITECT] Cognivault: [1359932e-b2ef-4b27-960f-bef9cb603c92] START: GET /health
+2026-03-31 16:16:41,076 [INFO] [ARCHITECT] Cognivault: [9d709620-eaff-49e6-9c02-5fef411e3771] END: GET /health | Status: 200 | Latency: 137.80ms
+INFO:     127.0.0.1:60146 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,076 [INFO] [ARCHITECT] Cognivault: [a63e51f8-8fba-47c8-8569-4815dee95e6c] START: GET /health
+2026-03-31 16:16:41,082 [INFO] [ARCHITECT] Cognivault: [302a4bf8-c5b9-443c-90c7-412b4d26f21d] START: GET /health
+2026-03-31 16:16:41,084 [INFO] [ARCHITECT] Cognivault: [30212336-ca63-46f0-a169-59c27bd5a100] START: GET /health
+2026-03-31 16:16:41,085 [INFO] [ARCHITECT] Cognivault: [a8c7a83b-a3d7-40cf-98eb-037d14862d35] START: GET /health
+2026-03-31 16:16:41,088 [INFO] [ARCHITECT] Cognivault: [37bc6168-6ba2-48a4-bd86-3d25be27e515] START: GET /health
+2026-03-31 16:16:41,090 [INFO] [ARCHITECT] Cognivault: [80e91296-ef61-4c58-82f8-5e0f9f81eeb3] START: GET /health
+2026-03-31 16:16:41,090 [INFO] [ARCHITECT] Cognivault: [ab504ca7-b3a2-476b-b7ee-44de95e67495] START: GET /health
+2026-03-31 16:16:41,095 [INFO] [ARCHITECT] Cognivault: [5040b657-cef0-4d6f-889c-2316283818b4] START: GET /health
+2026-03-31 16:16:41,098 [INFO] [ARCHITECT] Cognivault: [2b026460-c6aa-4db5-be60-b113dcbd5533] START: GET /health
+2026-03-31 16:16:41,098 [INFO] [ARCHITECT] Cognivault: [f59e7946-743b-4d6f-ba27-ba585f7b1d3b] START: GET /health
+2026-03-31 16:16:41,102 [INFO] [ARCHITECT] Cognivault: [d5d67f88-7a56-4ce0-a534-34524014d956] START: GET /health
+2026-03-31 16:16:41,105 [INFO] [ARCHITECT] Cognivault: [067ba400-3758-46a1-bbf3-0e95012d913b] START: GET /health
+2026-03-31 16:16:41,106 [INFO] [ARCHITECT] Cognivault: [01b1670f-88f2-419d-9daf-e13a298d9404] START: GET /health
+2026-03-31 16:16:41,111 [INFO] [ARCHITECT] Cognivault: [fb3e9d7e-6585-42ba-ab1d-93e678e77741] START: GET /health
+2026-03-31 16:16:41,114 [INFO] [ARCHITECT] Cognivault: [5f8e9422-eec0-4725-a9b3-a2cb58a7df56] START: GET /health
+2026-03-31 16:16:41,114 [INFO] [ARCHITECT] Cognivault: [fe24057e-81ea-4b8f-a3e4-bd374f6ac2f7] END: GET /health | Status: 200 | Latency: 46.22ms
+INFO:     127.0.0.1:60162 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,118 [INFO] [ARCHITECT] Cognivault: [6778c388-bab5-47c0-9353-51c0a1eb4a11] END: GET /health | Status: 200 | Latency: 43.62ms
+INFO:     127.0.0.1:60164 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,122 [INFO] [ARCHITECT] Cognivault: [61ae5252-5206-4118-9d49-e5892e437b32] END: GET /health | Status: 200 | Latency: 176.60ms
+INFO:     127.0.0.1:60148 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,123 [INFO] [ARCHITECT] Cognivault: [1359932e-b2ef-4b27-960f-bef9cb603c92] END: GET /health | Status: 200 | Latency: 46.43ms
+INFO:     127.0.0.1:60165 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,123 [INFO] [ARCHITECT] Cognivault: [560a8b3b-65de-4804-baa9-4f96edd5035f] END: GET /health | Status: 200 | Latency: 185.35ms
+INFO:     127.0.0.1:60149 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,126 [INFO] [ARCHITECT] Cognivault: [a63e51f8-8fba-47c8-8569-4815dee95e6c] END: GET /health | Status: 200 | Latency: 48.42ms
+INFO:     127.0.0.1:60166 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,126 [INFO] [ARCHITECT] Cognivault: [5b067468-e50d-447a-8dee-d5bf4f836de9] END: GET /health | Status: 200 | Latency: 153.28ms
+INFO:     127.0.0.1:60154 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,126 [INFO] [ARCHITECT] Cognivault: [7ea6a260-12a4-4906-b668-451ac5251fb8] END: GET /health | Status: 200 | Latency: 172.84ms
+INFO:     127.0.0.1:60152 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,126 [INFO] [ARCHITECT] Cognivault: [c334adf2-9c77-4b7e-a7e5-be8fd5bc577a] END: GET /health | Status: 200 | Latency: 161.51ms
+INFO:     127.0.0.1:60153 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,126 [INFO] [ARCHITECT] Cognivault: [302a4bf8-c5b9-443c-90c7-412b4d26f21d] END: GET /health | Status: 200 | Latency: 44.05ms
+INFO:     127.0.0.1:60167 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,126 [INFO] [ARCHITECT] Cognivault: [30212336-ca63-46f0-a169-59c27bd5a100] END: GET /health | Status: 200 | Latency: 42.00ms
+INFO:     127.0.0.1:60168 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,132 [INFO] [ARCHITECT] Cognivault: [a8c7a83b-a3d7-40cf-98eb-037d14862d35] END: GET /health | Status: 200 | Latency: 47.31ms
+INFO:     127.0.0.1:60169 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,132 [INFO] [ARCHITECT] Cognivault: [2e861903-b127-4b4e-aa1e-78a09601807c] END: GET /health | Status: 200 | Latency: 80.78ms
+INFO:     127.0.0.1:60158 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,132 [INFO] [ARCHITECT] Cognivault: [37bc6168-6ba2-48a4-bd86-3d25be27e515] END: GET /health | Status: 200 | Latency: 44.14ms
+INFO:     127.0.0.1:60170 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,135 [INFO] [ARCHITECT] Cognivault: [194574a9-cbe8-4600-89cc-d67e48537efe] END: GET /health | Status: 200 | Latency: 156.40ms
+INFO:     127.0.0.1:60157 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,145 [INFO] [ARCHITECT] Cognivault: [ce233b39-d66c-4ca7-9878-d4a6f520e88f] END: GET /health | Status: 200 | Latency: 206.71ms
+INFO:     127.0.0.1:60147 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,147 [INFO] [ARCHITECT] Cognivault: [15b179c7-813b-4259-9831-d1514f80156a] END: GET /health | Status: 200 | Latency: 199.78ms
+INFO:     127.0.0.1:60150 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,147 [INFO] [ARCHITECT] Cognivault: [a8b1816f-7752-4bd0-89f6-bba3e7d42046] END: GET /health | Status: 200 | Latency: 77.41ms
+INFO:     127.0.0.1:60163 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,147 [INFO] [ARCHITECT] Cognivault: [46fbe873-3e0c-45ab-88c8-defcb2a8f63c] END: GET /health | Status: 200 | Latency: 171.57ms
+INFO:     127.0.0.1:60155 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,151 [INFO] [ARCHITECT] Cognivault: [5040b657-cef0-4d6f-889c-2316283818b4] END: GET /health | Status: 200 | Latency: 56.18ms
+INFO:     127.0.0.1:60173 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,153 [INFO] [ARCHITECT] Cognivault: [13be6d03-5947-469f-ada7-7d8c6114fb5a] END: GET /health | Status: 200 | Latency: 89.94ms
+INFO:     127.0.0.1:60161 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,153 [INFO] [ARCHITECT] Cognivault: [02b1e44e-8ec8-440e-9af2-e7c4a6ac8f02] END: GET /health | Status: 200 | Latency: 94.85ms
+INFO:     127.0.0.1:60160 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [ab504ca7-b3a2-476b-b7ee-44de95e67495] END: GET /health | Status: 200 | Latency: 64.17ms
+INFO:     127.0.0.1:60172 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [cfd2a138-6dee-4cdd-a8d9-8442e7f5d8de] END: GET /health | Status: 200 | Latency: 102.59ms
+INFO:     127.0.0.1:60159 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [31107498-c795-4c2c-9bbd-acb8ba1da527] END: GET /health | Status: 200 | Latency: 203.95ms
+INFO:     127.0.0.1:60151 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [9374308a-a47d-4b9b-b8cf-55011481c360] END: GET /health | Status: 200 | Latency: 175.73ms
+INFO:     127.0.0.1:60156 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [80e91296-ef61-4c58-82f8-5e0f9f81eeb3] END: GET /health | Status: 200 | Latency: 64.17ms
+INFO:     127.0.0.1:60171 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [2b026460-c6aa-4db5-be60-b113dcbd5533] END: GET /health | Status: 200 | Latency: 56.17ms
+INFO:     127.0.0.1:60174 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [d5d67f88-7a56-4ce0-a534-34524014d956] END: GET /health | Status: 200 | Latency: 52.28ms
+INFO:     127.0.0.1:60176 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,154 [INFO] [ARCHITECT] Cognivault: [f59e7946-743b-4d6f-ba27-ba585f7b1d3b] END: GET /health | Status: 200 | Latency: 55.49ms
+INFO:     127.0.0.1:60175 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,163 [INFO] [ARCHITECT] Cognivault: [067ba400-3758-46a1-bbf3-0e95012d913b] END: GET /health | Status: 200 | Latency: 58.24ms
+INFO:     127.0.0.1:60177 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,169 [INFO] [ARCHITECT] Cognivault: [01b1670f-88f2-419d-9daf-e13a298d9404] END: GET /health | Status: 200 | Latency: 63.37ms
+INFO:     127.0.0.1:60178 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,171 [INFO] [ARCHITECT] Cognivault: [fb3e9d7e-6585-42ba-ab1d-93e678e77741] END: GET /health | Status: 200 | Latency: 60.11ms
+INFO:     127.0.0.1:60179 - "GET /health HTTP/1.1" 200 OK
+2026-03-31 16:16:41,171 [INFO] [ARCHITECT] Cognivault: [5f8e9422-eec0-4725-a9b3-a2cb58a7df56] END: GET /health | Status: 200 | Latency: 57.24ms
+INFO:     127.0.0.1:60180 - "GET /health HTTP/1.1" 200 OK

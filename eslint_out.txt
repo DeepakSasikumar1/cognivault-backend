@@ -1,0 +1,27 @@
+
+C:\Users\deepa\Downloads\Cognivault\src\pages\ChatAssistant.jsx
+  166:27  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  164 |     
+  165 |     // Determine delay and response semi-randomly without triggering purity rules
+> 166 |     const delay = 1200 + (Date.now() % 800);
+      |                           ^^^^^^^^^^ Cannot call impure function
+  167 |     await new Promise(resolve => setTimeout(resolve, delay));
+  168 |     
+  169 |     const response = MOCK_RESPONSES[(Date.now() % MOCK_RESPONSES.length)];  react-hooks/purity
+  169:38  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  167 |     await new Promise(resolve => setTimeout(resolve, delay));
+  168 |     
+> 169 |     const response = MOCK_RESPONSES[(Date.now() % MOCK_RESPONSES.length)];
+      |                                      ^^^^^^^^^^ Cannot call impure function
+  170 |     setLoading(false);
+  171 |     setMessages(prev => [...prev, { role: "assistant", ...response }]);
+  172 |   };                       react-hooks/purity
+
+✖ 2 problems (2 errors, 0 warnings)
+

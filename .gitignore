@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Principal Security: Env Files
+.env
+*.local
+.gemini/
+
+# Dependency Directories
+node_modules
+dist
+dist-ssr
+.venv
+venv
+env
+
+# Principal Python Exclusion
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Database
+*.db
+*.db-journal
+*.sqlite3
+
+# Assets & Uploads (Non-versioned)
+backend/uploads/
+src/assets/docs/
+.env.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

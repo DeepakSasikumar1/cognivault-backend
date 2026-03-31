@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # PRINCIPAL AI API
+  api:
+    build: .
+    container_name: cognivault-api
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./cognivault.db # Swapping logic
+    volumes:
+      - ./uploads:/app/uploads
+      - ./cognivault.db:/app/cognivault.db
+    restart: always
+
+  # Future: Postgres Instance for Scale
+  # db:
+  #   image: postgres:15-alpine
+  #   restart: always
+  #   environment:
+  #     - POSTGRES_USER=cogni
+  #     - POSTGRES_PASSWORD=vault
+  #     - POSTGRES_DB=cognivault
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

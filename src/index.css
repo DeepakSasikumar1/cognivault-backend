@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f8fafcb3;
+  --surface: rgba(255, 255, 255, 0.75);
+  --surface-2: rgba(241, 245, 249, 0.8);
+  --border: rgba(226, 232, 240, 0.6);
+  --text: #0f172a;
+  --text-2: #334155;
+  --text-3: #64748b;
+  --brand: #4f46e5;
+  --brand-light: rgba(79, 70, 229, 0.1);
+}
+
+.dark {
+  --bg: #090e17;
+  --surface: rgba(15, 23, 42, 0.45);
+  --surface-2: rgba(30, 41, 59, 0.5);
+  --border: rgba(51, 65, 85, 0.4);
+  --text: #f8fafc;
+  --text-2: #cbd5e1;
+  --text-3: #94a3b8;
+  --brand: #6366f1;
+  --brand-light: rgba(99, 102, 241, 0.15);
+}
+
+body {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  background-color: var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+  .dark body::before {
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
+}
+
+@keyframes bounce-short {
+  0% { transform: translateY(100%); opacity: 0; }
+  60% { transform: translateY(-5%); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@layer utilities {
+  .animate-bounce-short {
+    animation: bounce-short 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+}
+
+@layer components {
+    .glass {
+      @apply bg-[var(--surface)] backdrop-blur-2xl border border-[var(--border)];
+    }
+    .card {
+      @apply bg-[var(--surface)] backdrop-blur-2xl border border-[var(--border)] rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-300;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .card:hover {
+      @apply shadow-[0_12px_40px_rgb(0,0,0,0.06)] border-[rgba(99,102,241,0.2)] -translate-y-0.5;
+    }
+    .dark .card {
+      @apply shadow-[0_8px_30px_rgb(0,0,0,0.2)];
+    }
+    .dark .card:hover {
+      @apply shadow-[0_12px_40px_rgb(0,0,0,0.4)] border-[rgba(99,102,241,0.3)];
+    }
+    .btn-primary {
+      @apply rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-indigo-500/40 hover:-translate-y-0.5 hover:from-indigo-400 hover:to-indigo-500 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+    }
+    .btn-ghost {
+      @apply rounded-xl px-4 py-2 text-sm font-semibold text-[var(--text-2)] transition-all duration-200 hover:bg-[var(--surface-2)] hover:text-[var(--text)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+    .input-base {
+      @apply bg-[var(--surface-2)] border border-[var(--border)] text-[var(--text)] w-full rounded-xl px-4 py-2.5 text-sm transition-all duration-300 outline-none focus:border-indigo-500 focus:ring-[3px] focus:ring-indigo-500/20 focus:bg-[var(--surface)] shadow-inner dark:shadow-none;
+    }
+    .nav-item {
+      @apply flex cursor-pointer items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-[var(--text-3)] transition-all duration-200 hover:bg-[var(--surface-2)] hover:text-[var(--text)];
+    }
+    .nav-item.active {
+      @apply bg-[var(--brand-light)] text-indigo-600 font-semibold;
+      box-shadow: inset 3px 0 0 0 var(--brand);
+    }
+    .dark .nav-item.active {
+      @apply text-indigo-400;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-3);
+}
+
+.bg-grid-light {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.03)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+.dark .bg-grid-dark {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.03)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}

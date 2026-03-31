@@ -1,0 +1,28 @@
+1. Testing Requirement 14: Health Check...
+{'status': 'ok', 'database': 'connected', 'ai_service': 'unavailable', 'worker': 'Ready'}
+
+2. Registering Employee...
+Employee already exists.
+
+3. Logging in...
+
+4. Uploading PDF (Requirement 3)...
+Document Uploaded: ID 5
+Waiting for Background Indexer & Auto-tagging (Req 9 & 12)...
+
+6. Getting Structured Summary (Requirement 8)...
+{
+  "id": 5,
+  "overview": "Summary logic fault: 400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]",
+  "key_points": [],
+  "dates_and_events": [],
+  "critical_insights": [],
+  "risk_assessment": "Failure",
+  "action_items": []
+}
+
+7. Testing Streaming RAG (Req 7) & Token Analytics (Req 11)...
+I do not have enough information.
+
+8. Verifying Chat Economics (Requirement 11)...
+Latest Chat: Prompt: 0 | Completion: 0 | Total: 0
